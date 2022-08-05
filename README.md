@@ -20,6 +20,7 @@ content/urls.py - contains urls
 
 ---
 ## How To Run
+* $cd portfolio
 * $python3 manage.py makemigrations 
 * $python3 manage.py migrate
 * $python3 manage.py runserver
