@@ -26,22 +26,6 @@ def resume(request):
     return render(request, "content/resume.html")
 
 def contact_me(request):
-    if request.method == "GET":
      return render(request, "content/contact.html", {
          "form": EmailForm
      })
-    else:
-        form = EmailForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data["name"]
-            email = form.cleaned_data["email"]
-            Subscriber(name=name, email=email).save()
-            return render(request, "content/contact.html", {
-            "form": EmailForm,
-            "success": True
-        })
-        else: 
-            return render(request, "content/contact.html", {
-            "form": form,
-            "success": False
-        })
