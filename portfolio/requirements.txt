@@ -32,3 +32,4 @@ virtualenv==20.16.4
 virtualenvwrapper-win==1.2.7
 Werkzeug==2.2.2
 yarg==0.1.9
+whitenoise==6.2.0
